@@ -1,0 +1,30 @@
+1. barebones http server
+  A. accepts GET requests, returns files >> DONE
+    1) route paths to /public >> DONE
+  B. handle errors, return 404 page >> DONE
+    1) hardcoded 404 >> DONE
+    2) redirect to 404 page >> DONE
+2. modularize >> DONE
+  A. identify request type >> DONE
+  B. write handlers for each request type  >> IN PROGRESS
+    1) GET >> DONE
+    2) POST >> DONE
+      a. capture POST data >> DONE
+      b. parse data >> DONE
+      c. generate raw HTML  >> DONE
+      d. write HTML to fs >> DONE
+      e. update index page >> DONE
+    3)
+
+
+
+
+
+    var username = 'Test';
+var password = '123';
+var auth = 'Basic ' + new Buffer(username + ':' + password).toString('base64');
+
+// auth is: 'Basic VGVzdDoxMjM='
+
+var header = {'Host': 'www.example.com', 'Authorization': auth};
+var request = client.request('GET', '/', header);
